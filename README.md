@@ -26,13 +26,7 @@ Start an Apollo server, that has a schema defined with the following types and q
 - Types: Program, Product, Transaction, User
 - Queries: program, programs, product, products, transaction, transactions, user, users
 
- Fixtures can be found in the following files:
-```bash
- ./fixtures/programs.json
- ./fixtures/products.json
- ./fixtures/transactions.json
- ./fixtures/users.json
- ```
+ Fixtures can be found in `./fixtures.json`
  
 ### Suggested tools and services
 - Docker
