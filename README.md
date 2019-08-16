@@ -1,4 +1,4 @@
-# Technical assignment, Back End Developer
+# Technical assignment, back end developer
 There are four tasks described below, please fork this project, complete the assignment and send a pull request so that we can review your work.
 Completing all tasks will definitely be optimal, but two or more tasks completed with a high standard will also be considered.
 A candidate is free to use any external resources, if calling a friend (or a stranger) is the the only way out, just do it.
@@ -26,7 +26,7 @@ Start an Apollo server, that has a schema defined with the following types and q
 - Types: Program, Product, Transaction, User
 - Queries: program, programs, product, products, transaction, transactions, user, users
 
- Fixtures can be found in `./fixtures.json`
+ Fixtures can be found [here](./fixtures.json)
  
 ### Suggested tools and services
 - Docker
