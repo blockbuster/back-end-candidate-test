@@ -14,7 +14,7 @@ The assignment will be evaluated based on the following criterias:
 - Finding typos in this Readme
 
 ## 1. Serverless function and Cloud Storage
-Write a serverless function (eg.AWS lambda), in your preferred language, that takes an object as an argument and writes this to a cloud storage.
+Write a serverless function (eg.AWS lambda), in your preferred language, that takes an object as an argument and writes the object into a file on a cloud storage.
 
 ### Suggested tools and services
 - Docker
