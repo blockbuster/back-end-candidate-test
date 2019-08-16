@@ -33,7 +33,7 @@ Start a GraphQL server, that has a schema defined with the following types and q
 - Apollo, apollo-server and graphql
 
 ## 3. Web service
-Write a simple web service that connects to the graphql server created in the task above (2. GraphQl server).
+Write a simple web service that connects to the graphql server created in the [task above](#2-graphql-server).
 The service should be able to present data fetched using grapqhl queries, but no styling needs to be applied (just show raw data, no css needed).
 
 ### Suggested tools
