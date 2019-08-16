@@ -22,7 +22,7 @@ Write a serverless function (eg.AWS lambda), in your preferred language, that ta
 - MinIO
 
 ## 2. GraphQL server
-Start an Apollo server, that has a schema defined with the following types and queries.
+Start a GraphQL server, that has a schema defined with the following types and queries.
 - Types: Program, Product, Transaction, User
 - Queries: program, programs, product, products, transaction, transactions, user, users
 
