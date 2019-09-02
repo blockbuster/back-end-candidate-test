@@ -1,0 +1,31 @@
+version: '3'
+services:
+  back-end:
+    build: ./back-end
+    volumes:
+      - .:/usr/src/back-end
+      - /usr/src/back-end/node_modules
+    environment:
+      PORT: 3000
+      NODE_ENV: development
+    ports:
+      - 3010:3000
+  front-end:
+    build: ./front-end
+    volumes:
+      - .:/usr/src/front-end
+      - /usr/src/front-end/node_modules
+    environment:
+      PORT: 80
+    ports:
+      - 8080:80
+  minio:
+    image: minio/minio
+    volumes:
+      - /usr/data
+    ports:
+      - 9000:9000
+    environment:
+      MINIO_ACCESS_KEY: minio
+      MINIO_SECRET_KEY: minio-storage
+    command: server /data

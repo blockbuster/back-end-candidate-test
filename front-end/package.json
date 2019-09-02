@@ -1,0 +1,50 @@
+{
+  "name": "back-end-candidate-test-front-end",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "author": "Andrew Snytko <andrew.snytko@gmail.com>",
+  "license": "ISC",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --env production",
+    "start": "webpack-dev-server --config webpack.config.js",
+    "start:server": "nodemon server.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-loader": "^3.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "@apollo/react-hooks": "^3.0.1",
+    "apollo-boost": "^0.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "graphql": "^14.5.4",
+    "graphql-tag": "^2.10.1",
+    "react": "^16.9.0",
+    "react-apollo": "^3.0.1",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "reactstrap": "^8.0.1"
+  }
+}

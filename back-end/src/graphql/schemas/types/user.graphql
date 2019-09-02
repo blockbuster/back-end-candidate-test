@@ -1,0 +1,8 @@
+"""
+User type
+"""
+type User {
+  id: String!
+  name: String!
+  created: Date!
+}

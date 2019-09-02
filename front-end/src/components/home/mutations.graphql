@@ -1,0 +1,5 @@
+mutation SAVE_DATA_TO_FILE($data: String!) {
+  saveDataToFile(data: $data) {
+    message
+  }
+}

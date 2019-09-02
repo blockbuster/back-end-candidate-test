@@ -1,0 +1,19 @@
+query GET_PRODUCTS {
+  products {
+    id
+    program_id
+    start
+    end
+    price
+  }
+}
+
+query GET_PRODUCT($id: String!) {
+  product(id: $id) {
+    id
+    program_id
+    start
+    end
+    price
+  }
+}

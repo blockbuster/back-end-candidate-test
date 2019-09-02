@@ -1,0 +1,13 @@
+query GET_PROGRAMS {
+  programs {
+    id
+    title
+  }
+}
+
+query GET_PROGRAM($id: String!) {
+  program(id: $id) {
+    id
+    title
+  }
+}

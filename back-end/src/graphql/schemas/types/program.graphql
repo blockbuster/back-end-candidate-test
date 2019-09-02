@@ -1,0 +1,7 @@
+"""
+Program type
+"""
+type Program {
+  id: String!
+  title: String!
+}

@@ -1,0 +1,15 @@
+{
+  "name": "back-end-candidate-test-serverless",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Andrew Snytko <andrew.snytko@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "minio": "^7.0.12",
+    "uuid": "^3.3.3"
+  }
+}

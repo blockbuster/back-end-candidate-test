@@ -1,0 +1,15 @@
+query GET_USERS {
+  users {
+    id
+    name
+    created
+  }
+}
+
+query GET_USER($id: String!) {
+  user(id: $id) {
+    id
+    name
+    created
+  }
+}

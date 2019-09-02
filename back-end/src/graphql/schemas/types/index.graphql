@@ -1,0 +1,5 @@
+# import * from './message.graphql'
+# import * from './program.graphql'
+# import * from './product.graphql'
+# import * from './transaction.graphql'
+# import * from './user.graphql'

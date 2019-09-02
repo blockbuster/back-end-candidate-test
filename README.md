@@ -1,53 +1,37 @@
-# Technical assignment, back end developer
-## INTRODUCTION
+# Back-end candidate test
 
-### Assignment completion and delivery
-A candidate is free to use any external resources, if calling a friend (or a stranger) is the the only way out, just do it. There are four tasks described below, please fork this project, complete the assignment and send a pull request so that we can review your work. Remember to include a description on how to run and test the work (including dependencies).
+## How to start project
 
-### Assignment structure
-Tasks 1 and 2 can be completed independently, task 3 relies on completion of task 2, task 4 relies on completion of task 1, 2, and 3.
+### Required dependencies
 
-### Assignment evaluation
-Completing all tasks is definitely optimal, but pull requests where two or more tasks are completed, with a high standard, will also be considered.
+- Docker (https://docs.docker.com/install/)
+- AWS SAM CLI (https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) - no AWS sign in needed here
+- make (https://www.gnu.org/software/make/manual/html_node/Introduction.html)
 
-The assignment will be evaluated based on the following criterias:
-- Completed tasks
-- Features, does it work like it's expected to
-- Coding style
-- Tests
-- Finding typos in this Readme
+By running `make` in the project root folder, following services are starting:
 
-### Other information
-The entire assignment can be completed using open source software and without using any paid services, as it is possible to run all of the services locally (eg. by using virtualization).
+- front-end server
+- back-end graphql server
+- minio storage container
+- aws lambda function as API.
 
-## TASKS
-### 1. Serverless function and Cloud Storage
-Write a serverless function (eg.AWS lambda), in your preferred language, that takes an object as an argument and writes the object into a file on a cloud storage.
+## How to test project
 
-**Suggested tools and services:**
-- Docker
-- AWS SAM CLI
-- MinIO
+Front-end is started on port `8080`. You can go to [localhost:8080](http://localhost:8080) to open the webpage.
 
-### 2. GraphQL server
-Start a GraphQL server, that has a schema defined with the following types and queries.
-- Types: Program, Product, Transaction, User
-- Queries: program, programs, product, products, transaction, transactions, user, users
+Back-end is started on port `3010`. You can go to [localhost:3010/graphql](http://localhost:3010/graphql) to open graphql playground.
 
- Fixtures can be found [here](./fixtures.json)
- 
-**Suggested tools and services:**
-- Docker
-- Apollo, apollo-server and graphql
+Minio storage is hosted on port `9000`. You ca go to [localhost:9000](http://localhost:9000) to see the files storage and check the files after saving.
 
-### 3. Web service
-Write a simple web service that connects to the graphql server created in the [task above](#2-graphql-server).
-The service should be able to present data fetched using grapqhl queries, but no styling needs to be applied (just show raw data, no css needed).
+- Access key is `minio`
+- Secret Key is `minio-storage`
+  
+AWS lambda function is started locally as API on port `3000`. You can try it out by running
 
-**Suggested tools and services:**
-- Docker
-- reactjs 
-
-### 4. Connect the services
-Create an endpoint on the web service that sends a mutation to the GraphQl server. The mutation should call the lambda, that then writes the data sent to a file on the cloud storage (emulated).
-Hint! You can run the different services in the same virtual network (also the lambda) to make communication easier.
+```bash
+curl \
+  http://localhost:3000/save \
+  -X POST \
+  -H 'Content-Type: application/json' \
+  -d '{ "data": "Hello World!" }'
+```

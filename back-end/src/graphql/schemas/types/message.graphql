@@ -1,0 +1,6 @@
+"""
+Message type
+"""
+type Message {
+  message: String
+}

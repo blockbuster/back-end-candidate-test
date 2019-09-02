@@ -1,0 +1,48 @@
+# import * from './types/index.graphql'
+
+scalar Date
+
+type Query {
+  """
+  Get all programs
+  """
+  programs: [Program]!
+  """
+  Get program by ID
+  """
+  program(id: String!): Program!
+
+  """
+  Get all products
+  """
+  products: [Product]!
+  """
+  Get product by ID
+  """
+  product(id: String!): Product!
+
+  """
+  Get all transactions
+  """
+  transactions: [Transaction]!
+  """
+  Get transaction by ID
+  """
+  transaction(id: String!): Transaction!
+
+  """
+  Get all users
+  """
+  users: [User]!
+  """
+  Get user by ID
+  """
+  user(id: String!): User!
+}
+
+type Mutation {
+  """
+  Save data to the file in the cloud
+  """
+  saveDataToFile(data: String!): Message
+}

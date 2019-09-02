@@ -1,0 +1,21 @@
+{
+  "name": "back-end-candidate-test-back-end",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "author": "Andrew Snytko <andrew.snytko@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.9.2",
+    "express": "^4.17.1",
+    "graphql": "^14.5.4",
+    "graphql-import": "^0.7.1",
+    "graphql-middleware": "^4.0.1",
+    "graphql-tools": "^4.0.5",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^1.19.1"
+  }
+}

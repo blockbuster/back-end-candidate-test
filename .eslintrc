@@ -1,0 +1,15 @@
+{
+  "extends": ["eslint-config-airbnb", "prettier", "prettier/react"],
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "max-classes-per-file": "off",
+    "class-methods-use-this": "off"
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "parser": "babel-eslint"
+}
