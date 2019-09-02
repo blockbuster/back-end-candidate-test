@@ -1,8 +1,7 @@
 {
-  "name": "back-end-candidate-test-back-end",
+  "name": "back-end-candidate-test",
   "version": "0.0.1",
   "description": "",
-  "main": "app.js",
   "author": "Andrew Snytko <andrew.snytko@gmail.com>",
   "license": "ISC",
   "devDependencies": {
