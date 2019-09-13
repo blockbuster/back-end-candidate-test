@@ -1,0 +1,6 @@
+type Transaction {
+    id: String!
+    timestamp: Date!
+    product_id: String!
+    user_id: String!
+}

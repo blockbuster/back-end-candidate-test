@@ -1,0 +1,4 @@
+type Program {
+    id: String!
+    title: String!
+}

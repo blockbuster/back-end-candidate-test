@@ -1,0 +1,6 @@
+{
+	"SERVER": {
+		"base_url": "http://localhost",
+		"port": 4000
+	}
+}

@@ -1,0 +1,25 @@
+# import Program from './program.graphql'
+# import Product from './product.graphql'
+# import Transaction from './transaction.graphql'
+# import Message from './message.graphql'
+# import User from './user.graphql'
+
+scalar Date
+
+type Query {
+    product(id: String!): Product
+    products: [Product]!
+
+    program(id: String!): Program
+    programs: [Program]!
+
+    transaction(id: String!): Transaction
+    transactions: [Transaction]!
+
+    user(id: String): User
+    users: [User]!
+}
+
+type Mutation {
+  saveData(data: String!): Message
+}

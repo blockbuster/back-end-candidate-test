@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: save-to-bucket
+
+Globals:
+  Function:
+    Timeout: 10
+    Runtime: nodejs10.x
+
+Resources:
+  SaveObjectToFileFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: .
+      Handler: app.handler
+      Runtime: nodejs10.x
+      Environment:
+        Variables:
+          ACCESS_KEY: 'minio'
+          SECRET_KEY: 'minio-storage'
+          NODE_ENV: 'development'
+      Events:
+        SaveObjectToFile:
+          Type: Api
+          Properties:
+            Path: /save
+            Method: post

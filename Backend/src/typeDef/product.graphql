@@ -1,0 +1,7 @@
+type Product {
+    id: String!
+    program_id: String!
+    start: Date!
+    end: Date!
+    price: Float!
+}
