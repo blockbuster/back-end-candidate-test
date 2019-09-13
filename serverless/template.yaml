@@ -1,0 +1,46 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Transform: 'AWS::Serverless-2016-10-31'
+
+Globals:
+  Function:
+    Timeout: 10
+
+
+Resources:
+
+  SavingObjectFunction:
+    # This resource creates a Lambda function.
+    Type: 'AWS::Serverless::Function'
+
+    Properties:
+
+      # This function uses the Nodejs v8.10 runtime.
+      Runtime: nodejs10.x
+
+      # This is the Lambda function's handler.
+      Handler: ./src/lambda.handler
+
+      # The location of the Lambda function code.
+      CodeUri: ./
+
+      # This is Lambda environment settings
+      Environment:
+        Variables:
+          MINIO_ENDPOINT: host.docker.internal:9000
+          MINIO_ACCESS_KEY: minio
+          MINIO_SECRET_KEY: minio-storage
+          BUCKET_NAME: lambda
+          PORT: 3001
+
+      # Event sources to attach to this function. In this case, we are attaching
+      # one API Gateway endpoint to the Lambda function. The function is
+      # called when a HTTP request is made to the API Gateway endpoint.
+      Events:
+
+        SavingObjectApi:
+          Type: Api
+          Properties:
+            Path: /
+            Method: POST
+

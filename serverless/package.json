@@ -1,0 +1,19 @@
+{
+  "name": "serverless",
+  "version": "1.0.0",
+  "description": "Lambda function for saving files to storage.",
+  "main": "src/lambda.js",
+  "scripts": {
+    "test": "mocha ./tests"
+  },
+  "author": "Dmitry Kulinich <dmitry.kulinich@ukr.net>",
+  "license": "ISC",
+  "dependencies": {
+    "minio": "^7.0.12",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  },
+  "devDependencies": {
+    "bespoken-tools": "^2.3.38"
+  }
+}
